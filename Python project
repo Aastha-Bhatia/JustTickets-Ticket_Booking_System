@@ -248,3 +248,49 @@ def whole_program():
     #b_label=Label(root, image=photo)
     #b_label.grid(row=2,column=3)
     #b=Label()
+    #b.grid()
+    #text in our form and packing
+    name=Label(root, text="  >>    Name",fg="white",bg="black").grid(row=4,column=1)
+    phoneno=Label(root, text="         >>    Phone No.",fg="white",bg="black").grid(row=5,column=1)
+    email=Label(root, text="    >>    Email id",fg="white",bg="black").grid(row=6,column=1)
+    #making variables for storing entries
+    namevalue=StringVar()
+    phonenovalue=StringVar()
+    emailvalue=StringVar()
+    termsvalue=IntVar()
+    #entries for our form
+    nameentry= Entry(root,textvariable=namevalue)
+    phoneentry= Entry(root,textvariable=phonenovalue)
+    emailentry= Entry(root,textvariable=emailvalue)
+    #line=Label(text="",bg="black").grid(row=6,column=3)
+    terms=Checkbutton(root,text="I Agree to the Terms and Conditions",variable=termsvalue)
+    #packing the entries
+    nameentry.grid(row=4,column=3)
+    phoneentry.grid(row=5,column=3)
+    emailentry.grid(row=6,column=3)
+    space2=Label(text="",bg="black").grid(row=7,column=3)
+    terms.grid(row=10,column=3)
+    #button and packing it and giving it a command
+    line1=Label(root,text="\n",bg="black").grid(row=11,column=3)
+    b1=Button(root,text=" Log In ",padx=5,command=ok).grid(row=11,column=3)
+    space1=Label(root,text="\n",bg="black").grid(row=13,column=3)
+    text1=Label(root, text="\n\n\nMOVIE ? JUST TICKETS ! ",bg="black",fg="white").grid(row=12,column=3)
+    root.mainloop()
+
+win = Tk()
+
+win.geometry("871x654")
+win.title("www.justickets.com")
+win.minsize(871 ,654)
+win.maxsize(871 ,654)
+frame = Frame(win, width=871, height=654)
+frame.grid()
+img = ImageTk.PhotoImage(Image.open("moviebanner.jpg"))
+label = Label(frame, image = img)
+label.grid()
+#have to position buttons
+btn = Button(win, text = 'PROCEED >>>',command=clickme_,bg="yellow",fg="black")
+btn.place(anchor= SE, x=860,y=640) 
+
+
+win.mainloop()
