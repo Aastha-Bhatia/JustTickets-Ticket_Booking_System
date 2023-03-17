@@ -1,0 +1,50 @@
+from tkinter import *
+from tkinter import messagebox
+
+from PIL import Image, ImageTk
+
+
+def clickme_():
+    whole_program()
+
+def whole_program():
+    
+
+
+    def ok():
+        name=nameentry.get()
+        phone=phoneentry.get()
+        email=emailentry.get()
+        term=terms.invoke()
+        if(name=="" or phone=="" or email=="" or terms=="0"):
+            messagebox.showinfo("Alert","Enter Correct Info !")
+
+        else:
+            messagebox.showinfo("success","You have been logged in ! ")
+            firstcommand()
+
+    def seventhcommand(): 
+        def selection():
+            namet=nameentry.get()
+            phonet=phoneentry.get()
+            emailt=emailentry.get()
+
+            date = listroom.get()
+            seats = listroom1.get()
+            types = listroom2.get()
+            if types=="NORMAL - 180 Rs":
+                temp=180
+            elif types=="PREMIUM - 400 Rs":
+                temp=400
+            elif types=="EXECUTIVE - 500 Rs":
+                temp=500
+            timings = listroom3.get()
+            price = int(seats)*int(temp)
+            messagebox.showinfo("TICKET INVOICE",f'''
+            O O O O O O O O O O O O O O O O O O O O O O
+            O                     
+            O                   TICKET 
+            O               www.justickets.com
+            O
+            O   NAME           : {namet}                
+            O   PHONE NO   : {phonet}             
