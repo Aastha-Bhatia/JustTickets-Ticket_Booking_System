@@ -48,3 +48,53 @@ def whole_program():
             O
             O   NAME           : {namet}                
             O   PHONE NO   : {phonet}             
+            O   EMAIL ID       : {emailt}               
+            O                                         
+            O O O O O O O O O O O O O O O O O O O O O O                                        
+            O                                      
+            O    NUMBER OF SEATS: {seats}             
+            O    TYPE OF SEATS      : {types}             
+            O    DATE                  : {date}              
+            O    TIMINGS              : {timings}          
+            O                                         
+            O                PRICE      : {price}Rs   
+            O                                         
+            O O O O O O O O O O O O O O O O O O O O O O 
+        
+            
+             ''')
+            messagebox.showinfo("Greetings","Thankyou for choosing justickets,\n\n\n PROGRAM MADE BY : AASTHA BHATIA")
+            
+            eighth.destroy()
+            root.destroy()
+            win.destroy()
+            
+        import tkinter
+        eighth=Tk()
+        eighth.geometry("870x590")
+        eighth.minsize(870,590)
+        eighth.maxsize(870,590)
+        eighth.title("TICKET BOOKING >>>>")
+        eighth.config(bg="black")
+        b=Label(eighth,text="BOOK TICKETS ",bg="black",fg="white",font=("Helventica bold",25),padx=330,pady=20).grid(row=0,column=3)
+        c=Label(eighth,text="\n",bg="black").grid(row=1,column=3)
+        c1=Label(eighth,text="SELECT THE DATE >>> ",fg="white",bg="black",font=("Helventica bold",12),padx=20).place(x=100,y=117,width=200)
+
+        list=["19 December 2022","20 December 2022","21 December 2022","22 December 2022","23 December 2022"]
+        listroom=StringVar(eighth)
+        listroom.set("Select the date  ")
+        menu=OptionMenu(eighth,listroom,*list)
+        menu.place(x=500,y=117,width=200)
+        b1=Label(eighth,text="NUMBER OF SEATS >>> ",bg="black",fg="white",font=("Helventica bold",12),padx=330,pady=20).place(x=100,y=230,width=200)
+        list1=["1","2","3","4","5","6","7","8","9","10"]
+        listroom1=StringVar(eighth)
+        listroom1.set("Select the number of seats ")
+        menu1=OptionMenu(eighth,listroom1,*list1)
+        menu1.place(x=500,y=250,width=200)
+        b2=Label(eighth,text="SEAT TYPE >>> ",bg="black",fg="white",font=("Helventica bold",12),padx=330,pady=20).place(x=80,y=370,width=200)
+        list2=["NORMAL - 180 Rs","PREMIUM - 400 Rs","EXECUTIVE - 500 Rs"]
+        listroom2=StringVar(eighth)
+        listroom2.set("Select the seat type ")
+        menu2=OptionMenu(eighth,listroom2,*list2)
+        menu2.place(x=500,y=383,width=200)
+        b3=Label(eighth,text="TIMINGS >>> ",bg="black",fg="white",font=("Helventica bold",12),padx=330,pady=20).place(x=80,y=500,width=200)
